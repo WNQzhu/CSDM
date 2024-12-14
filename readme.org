@@ -1,3 +1,37 @@
-* Addressing Cold-start Problem in Click-Through Rate Prediction via Supervised Diffusion Modeling
+#+TITLE: Addressing Cold-start Problem in Click-Through Rate Prediction via Supervised Diffusion Modeling
+#+OPTIONS: num:3
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 
-** preparing
+* Addressing Cold-start Problem in Click-Through Rate Prediction via Supervised Diffusion Modeling
+** CMD
+The following command reproduce our results on the TaobaoAD dataset as reported in the main paper:
+#+begin_src bash
+base=deepfm
+warm=diff
+epochs=2
+seed=42
+T=100
+ts=10
+iter=2
+run=10
+diff_coef=1
+python3 main.py --dataset_name taobaoAD --model_name ${base} \
+    --warmup_model ${warm} \
+    --diff_epochs ${epochs} \
+    --diff_iters ${iter} \
+    --T ${T} \
+    --timesteps ${ts} \
+    --noise_min 0.0001 \
+    --noise_max 0.0001 \
+    --noise_scale 0.1 \
+    --diff_coef ${diff_coef} \
+    --run ${run} --seed ${seed}
+#+end_src
+
+** Note
+In our experiments, we observed that employing a larger position embedding in the U-Net enhanced the performance of DIFF on the ML data. However, increasing the size of the position embedding had a negligible effect on performance for the other datasets. We configured the position embedding to be twice the size of the ID embedding for a blance.
+
+** Acknowledgement
+This code is based on [[https://github.com/BestActionNow/CVAR][CVR]].
+
