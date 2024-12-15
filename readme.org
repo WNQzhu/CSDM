@@ -35,3 +35,9 @@ In our experiments, we observed that employing a larger position embedding in th
 ** Acknowledgement
 This code is based on [[https://github.com/BestActionNow/CVAR][CVR]].
 
+** Citation
+@misc{zhu2024csdm,
+      title={Addressing Cold-start Problem in Click-Through Rate Prediction via Supervised Diffusion Modeling}, 
+      author={Wenqiao Zhu and Lulu Wang and Jun Wu},
+      year={2024}
+}
