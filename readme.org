@@ -30,7 +30,7 @@ python3 main.py --dataset_name taobaoAD --model_name ${base} \
 #+end_src
 
 ** Note
-In our experiments, we observed that employing a larger position embedding in the U-Net enhanced the performance of DIFF on the ML data. However, increasing the size of the position embedding had a negligible effect on performance for the other datasets. We configured the position embedding to be twice the size of the ID embedding for a blance.
+In our experiments, we observed that employing a larger position embedding in the U-Net enhanced the performance of DIFF on the ML data. However, increasing the size of the position embedding had a negligible effect on performance for the other datasets. We configured the position embedding to be twice the size of the ID embedding for a balance.
 
 ** Acknowledgement
 This code is based on [[https://github.com/BestActionNow/CVAR][CVR]].
