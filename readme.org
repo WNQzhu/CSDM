@@ -38,9 +38,9 @@ This code is based on [[https://github.com/BestActionNow/CVAR][CVR]].
 ** Citation
 If you find our method useful, please kindly cite our paper.
 #+begin_src
-@misc{zhu2024csdm,
+@misc{zhu2025csdm,
       title={Addressing Cold-start Problem in Click-Through Rate Prediction via Supervised Diffusion Modeling}, 
       author={Wenqiao Zhu and Lulu Wang and Jun Wu},
-      year={2024}
+      year={2025}
 }
 #+end_src
